@@ -12,17 +12,16 @@ public class Principal {
         System.out.println("Digite o nome de uma receita: ");
         var nomeReceita = leitura.nextLine();
 
-
+        String endereco = "www.themealdb.com/api/json/v1/1/search.php?s=" + nomeReceita;
 
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
-            .uri(URI.create("http://foo.com/"))
+            .uri(URI.create(endereco))
             .build();
 
         HttpResponse<String> response = client
             .send(request, BodyHandlers.ofString());
 
 
-            
     }
 }
