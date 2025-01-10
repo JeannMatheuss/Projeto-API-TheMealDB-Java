@@ -1,18 +1,21 @@
-## Getting Started
+# Consulta de Receitas
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este é um programa em Java que permite ao usuário buscar receitas pelo nome utilizando a API pública do [TheMealDB](https://www.themealdb.com/). O programa retorna informações detalhadas sobre a receita buscada em formato JSON.
 
-## Folder Structure
+## Funcionalidades
 
-The workspace contains two folders by default, where:
+- Solicita ao usuário o nome de uma receita.
+- Realiza uma requisição HTTP para obter informações sobre a receita.
+- Exibe os detalhes da receita no formato retornado pela API.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Requisitos
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+- **Java 11 ou superior**: O programa utiliza a classe `HttpClient`, introduzida no Java 11.
+- **Conexão com a Internet**: Necessária para realizar a requisição à API do TheMealDB.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Como executar
 
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+1. Certifique-se de ter o Java 11 ou superior instalado.
+2. Compile o programa com o seguinte comando:
+   ```bash
+   javac Principal.java
