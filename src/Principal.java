@@ -12,7 +12,7 @@ public class Principal {
         System.out.println("Digite o nome de uma receita: ");
         var nomeReceita = leitura.nextLine();
 
-        String endereco = "www.themealdb.com/api/json/v1/1/search.php?s=" + nomeReceita;
+        String endereco = "https://www.themealdb.com/api/json/v1/1/search.php?s=" + nomeReceita;
 
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
@@ -22,6 +22,6 @@ public class Principal {
         HttpResponse<String> response = client
             .send(request, BodyHandlers.ofString());
 
-
+        System.out.println(response.body());
     }
 }
